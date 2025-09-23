@@ -1,0 +1,26 @@
+{
+  "name": "evalcraft",
+  "version": "0.0.1",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "private": true,
+  "files": [
+    "package.json"
+  ],
+  "scripts": {
+    "build": "turbo run build"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.127",
+    "@types/pdfkit": "^0.17.3",
+    "ts-node": "^10.9.2",
+    "tsdown": "^0.15.4",
+    "turbo": "^2.5.6"
+  },
+  "packageManager": "pnpm@10.17.0"
+}

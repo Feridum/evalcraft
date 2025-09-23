@@ -1,0 +1,72 @@
+version: "0.1"
+files:
+  - name: invoice-005
+    data:
+      invoice:
+        number: "INV-005"
+        date: "September 20, 2024"
+
+      company:
+        name: "My Company LLC"
+        address: "123 Business St"
+        city: "New York"
+        state: "NY"
+        zip: "10001"
+
+      client:
+        name: "John Doe"
+        company: "Client Corp"
+
+      lineItems:
+        - description: "Web Development Services"
+          quantity: "1"
+          rate: "$2,500.00"
+          amount: "$2,500.00"
+        - description: "Design & UX Consultation"
+          quantity: "2"
+          rate: "$750.00"
+          amount: "$1,500.00"
+        - description: "Project Management"
+          quantity: "1"
+          rate: "$500.00"
+          amount: "$500.00"
+
+      totals:
+        subtotal: "4,500.00"
+        tax: "360.00"
+        total: "4,860.00"
+  - name: invoice-006
+    data:
+      invoice:
+        number: "INV-006"
+        date: "September 20, 2024"
+
+      company:
+        name: "My Company LLC"
+        address: "123 Business St"
+        city: "New York"
+        state: "NY"
+        zip: "10001"
+
+      client:
+        name: "John Doe"
+        company: "Client Corp"
+
+      lineItems:
+        - description: "Web Development Services"
+          quantity: "1"
+          rate: "$2,500.00"
+          amount: "$2,500.00"
+        - description: "Design & UX Consultation"
+          quantity: "2"
+          rate: "$750.00"
+          amount: "$1,500.00"
+        - description: "Project Management"
+          quantity: "1"
+          rate: "$500.00"
+          amount: "$500.00"
+
+      totals:
+        subtotal: "4,500.00"
+        tax: "360.00"
+        total: "4,860.00"

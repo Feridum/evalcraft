@@ -1,0 +1,44 @@
+{
+  "commands": {
+    "generate:pdf": {
+      "aliases": [],
+      "args": {},
+      "description": "describe the command here",
+      "examples": [
+        "<%= config.bin %> <%= command.id %>"
+      ],
+      "flags": {
+        "data": {
+          "char": "d",
+          "description": "path to YAML file with data",
+          "name": "data",
+          "required": true,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "template": {
+          "char": "t",
+          "description": "name of template file",
+          "name": "template",
+          "required": true,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "invoice"
+          ],
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "generate:pdf",
+      "pluginAlias": "@evalcraft/cli",
+      "pluginName": "@evalcraft/cli",
+      "pluginType": "core",
+      "strict": true,
+      "enableJsonFlag": false
+    }
+  },
+  "version": "0.0.1"
+}

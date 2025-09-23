@@ -1,0 +1,52 @@
+{
+  "name": "@evalcraft/cli",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit",
+    "prepack": "npm run build && oclif manifest"
+  },
+  "bin": {
+    "evalcraft": "./bin/run.js"
+  },
+  "oclif": {
+    "bin": "evalcraft",
+    "commands": {
+      "strategy": "explicit",
+      "target": "./dist/index.js",
+      "identifier": "COMMANDS"
+    },
+    "dirname": "evalcraft",
+    "topicSeparator": ":"
+  },
+  "dependencies": {
+    "@oclif/core": "4.5.3",
+    "handlebars": "4.7.8",
+    "pdfkit": "0.17.2",
+    "yaml": "2.8.1"
+  },
+  "devDependencies": {
+    "@evalcraft/pdf-generation": "workspace:*",
+    "@evalcraft/templates": "workspace:*",
+    "@types/node": "18.19.127",
+    "@types/pdfkit": "0.17.3",
+    "ts-node": "10.9.2",
+    "tsdown": "0.15.4",
+    "turbo": "2.5.6"
+  }
+}

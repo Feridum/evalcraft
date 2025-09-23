@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "target": "es2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "composite": true,
+    "rootDir": ".",
+    "baseUrl": "./",
+     "paths": {
+      "@evalcraft/*": ["packages/*/src", "packages/*/dist"]
+    }
+  },
+  "references": [
+    { "path": "./apps/cli" },
+    { "path": "./packages/pdf-generation" },
+    { "path": "./packages/templates" }
+  ],
+  "include": ["packages/**/*", "apps/**/*"],
+  "exclude": [
+    "**/node_modules",
+    "**/dist",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "bin"
+  ],
+}
