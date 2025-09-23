@@ -1,6 +1,13 @@
 {
   "name": "@evalcraft/cli",
-  "version": "0.0.1",
+  "description": "Simple CLI to generate test documents for AI evaluation",
+  "keywords": [
+    "AI",
+    "evaluation",
+    "generator"
+  ],
+  "license": "MIT",
+  "version": "0.1.1",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

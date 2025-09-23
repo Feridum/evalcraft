@@ -23,7 +23,6 @@ export class GeneratePdf extends Command {
     const data = YAML.parse(file)
   
     const template = loadTemplate(flags.template  as TemplateKey);
-    this.log(JSON.stringify(flags, null, 2))
 
     for (const file of data.files){
       console.log(`Generating file: ${file.name} from template:`);

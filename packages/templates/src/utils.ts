@@ -15,8 +15,6 @@ export function loadTemplate(templatePath: TemplateKey): string {
         }
 
         const resolvedPath = path.resolve(__dirname, templateRelativePath);
-
-        console.log("Resolved path:", resolvedPath);
         return fs.readFileSync(resolvedPath, 'utf8');
     } catch (error) {
         throw new Error(`Failed to load template: ${error instanceof Error ? error.message : 'Unknown error'}`);

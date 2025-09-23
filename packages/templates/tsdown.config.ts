@@ -7,6 +7,6 @@ export default defineConfig({
   clean: true,
   target: 'node22',
   sourcemap: true,
-  copy: ['public',{ from: 'src/financial', to: 'dist/financial' }],
+  copy: [{ from: 'src/financial', to: 'dist/financial' }],
   external: ['pdfkit', 'handlebars', 'yaml']
 })
