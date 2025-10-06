@@ -17,16 +17,44 @@
           "multiple": false,
           "type": "option"
         },
+        "customTemplate": {
+          "char": "c",
+          "dependsOn": [
+            "data"
+          ],
+          "description": "path to custom template file",
+          "exclusive": [
+            "template"
+          ],
+          "name": "customTemplate",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
         "template": {
           "char": "t",
+          "dependsOn": [
+            "data"
+          ],
           "description": "name of template file",
+          "exclusive": [
+            "customTemplate"
+          ],
           "name": "template",
-          "required": true,
           "hasDynamicHelp": false,
           "multiple": false,
           "options": [
             "invoice"
           ],
+          "type": "option"
+        },
+        "output": {
+          "char": "o",
+          "description": "output directory",
+          "name": "output",
+          "default": "./output",
+          "hasDynamicHelp": false,
+          "multiple": false,
           "type": "option"
         }
       },

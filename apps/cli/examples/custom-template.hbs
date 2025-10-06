@@ -1,0 +1,21 @@
+{{#pdf_document}}
+  {{text_block 
+  text="Custom INVOICE FIGMAv2" 
+  startColumn=1 
+  columns=12 
+  y=60}},
+  {{text_block text="Invoice #{{invoice.number}}" startColumn=10 columns=3 y=100}},
+  {{text_block text="{{invoice.date}}" startColumn=10 columns=3 y=120}},
+  {{multiline_text_block 
+    lines=(array "{{company.name}}" "{{company.address}}" "{{company.city}}, {{company.state}} {{company.zip}}") 
+    startColumn=1 
+    columns=6 
+    y=160
+  }},
+  {{multiline_text_block lines=(array "Bill To:" "{{client.name}}" "{{client.company}}") startColumn=7 columns=6 y=160}},
+  {{table_block headers=(array "Description" "Quantity" "Rate" "Amount") data=lineItems fields=(array "description" "quantity" "rate" "amount") startColumn=1 y=280}},
+  {{text_block text="Subtotal: ${{totals.subtotal}}" startColumn=9 columns=4 y=400}},
+  {{text_block text="Tax: ${{totals.tax}}" startColumn=9 columns=4 y=420}},
+  {{text_block text="Total: ${{totals.total}}" startColumn=9 columns=4 y=450}},
+  {{text_block text="Thank you for your business!" startColumn=1 columns=12 y=520}}
+{{/pdf_document}}

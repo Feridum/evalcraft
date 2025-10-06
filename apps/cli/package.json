@@ -27,7 +27,7 @@
     "bin"
   ],
   "scripts": {
-    "build": "tsdown",
+    "build": "tsdown && oclif manifest",
     "dev": "./bin/dev.js",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
