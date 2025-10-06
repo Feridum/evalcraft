@@ -1,7 +1,8 @@
 import { generatePDFFromTemplate } from '@evalcraft/pdf-generation'
 import { loadTemplate, templatesKeys, type TemplateKey } from '@evalcraft/templates'
-import { Args, Command, Flags } from '@oclif/core'
+import { Command, Flags } from '@oclif/core'
 import fs from 'fs'
+import path from 'path'
 import YAML from 'yaml'
 
 
@@ -9,7 +10,7 @@ export class GeneratePdf extends Command {
   static override flags = {
     data: Flags.file({ description: 'path to YAML file with data', char: 'd', required: true, exists: true }),
     template: Flags.string({ description: 'name of template file', char:'t', options: templatesKeys, required: true }),
-
+    output: Flags.string({ description: 'output directory', char: 'o', default: './output' }),
   }
   static override description = 'describe the command here'
   static override examples = [
@@ -30,7 +31,7 @@ export class GeneratePdf extends Command {
       const templateFileResult = await generatePDFFromTemplate(
        template,
         file.data,
-        `./output/${file.name}.pdf`
+        path.join(flags.output, `${file.name}.pdf`)
       );
     
       if (templateFileResult.success) {

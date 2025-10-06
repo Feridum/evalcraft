@@ -241,9 +241,7 @@ evalcraft generate:pdf --help
 Future enhancements planned:
 - Additional document templates (receipts, contracts, reports)
 - Custom template support
-- Multiple output formats
-- Advanced styling options
-- Template preview functionality
+- Other types of documents
 
 ## 🤝 Contributing
 

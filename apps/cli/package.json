@@ -1,13 +1,18 @@
 {
   "name": "@evalcraft/cli",
   "description": "Simple CLI to generate test documents for AI evaluation",
+  "homepage": "https://github.com/Feridum/evalcraft/tree/main/apps/cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feridum/evalcraft.git"
+  },
   "keywords": [
     "AI",
     "evaluation",
     "generator"
   ],
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -23,7 +28,7 @@
   ],
   "scripts": {
     "build": "tsdown",
-    "dev": "tsdown --watch",
+    "dev": "./bin/dev.js",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
     "prepack": "npm run build && oclif manifest"
