@@ -36,8 +36,6 @@ export class GeneratePdf extends Command {
 
     const template = this.getTemplate(flags.template as TemplateKey | undefined, flags.customTemplate)
 
-    console.log('Using template:\n', template);
-
     for (const file of data.files){
       console.log(`Generating file: ${file.name} from template:`);
 
